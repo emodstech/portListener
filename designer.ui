@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>960</width>
+    <height>780</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1308</width>
+    <height>823</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font-weight: 500;     color: #494e58;</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label_3">
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+        <weight>63</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>PortListener 2021 ver. 1.0.</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QGridLayout" name="gridLayout_3">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>20</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <property name="horizontalSpacing">
+       <number>0</number>
+      </property>
+      <property name="verticalSpacing">
+       <number>6</number>
+      </property>
+      <item row="7" column="4">
+       <widget class="QCheckBox" name="portLisen">
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Слушать порт</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QComboBox" name="comList">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="7">
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>400</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="7" column="2">
+       <widget class="QPushButton" name="closePort">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Закрыть</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="label_2">
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+margin:1px;</string>
+        </property>
+        <property name="text">
+         <string>Скорость порта:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="5">
+       <widget class="QPushButton" name="cleaLogs">
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+margin:1px;</string>
+        </property>
+        <property name="text">
+         <string>Очистить</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="3">
+       <widget class="QLineEdit" name="speedPort">
+        <property name="toolTip">
+         <string>Скорость</string>
+        </property>
+        <property name="statusTip">
+         <string>Скорость</string>
+        </property>
+        <property name="whatsThis">
+         <string>Скорость</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+margin:1px;</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="portLabel">
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+
+</string>
+        </property>
+        <property name="text">
+         <string>Порт:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="4">
+       <widget class="QCheckBox" name="logsSave">
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+margin:1px;</string>
+        </property>
+        <property name="text">
+         <string>Сохранять логи</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QPushButton" name="openPort">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string>Открыть</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="5">
+       <widget class="QPushButton" name="cleaLogsTx">
+        <property name="styleSheet">
+         <string notr="true">border-radius:2px;
+padding:5px;
+border:1px solid #ccc;
+margin:1px;
+</string>
+        </property>
+        <property name="text">
+         <string>Очистить текстовые логи</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Отправить в порт:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLineEdit" name="portSend"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="sendPortBtn">
+        <property name="text">
+         <string>Отправить</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="logsLabel">
+      <property name="text">
+       <string>Логи:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTextBrowser" name="logs">
+      <property name="html">
+       <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans'; font-size:11pt; font-weight:504; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background:black;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
