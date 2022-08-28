@@ -3,9 +3,25 @@ from PyQt5 import QtWidgets, uic
 from PyQt5.QtSerialPort import QSerialPort, QSerialPortInfo
 from PyQt5.QtCore import QIODevice
 from PyQt5.QtGui import QTextCursor
+import os
+
 # иницилизируем qt и запускаем приложение
+# Define function to import external files when using PyInstaller.
+
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, relative_path)
+
+
 app = QtWidgets.QApplication([])
-ui = uic.loadUi("designer.ui")
+ui = uic.loadUi(resource_path("designer.ui"))
 ui.setWindowTitle("PortListener")
 
 serial = QSerialPort()
@@ -17,6 +33,7 @@ ui.portLabel.setStyleSheet("QLabel {background:rgba(191, 64, 64, 203) \
 with open("res.txt", "r") as file:
     speed = int(file.readline())
     ui.speedPort.setText(str(speed))
+
 
 for port in ports:
     ui.comList.addItem((port.portName()))
@@ -80,6 +97,8 @@ ui.closePort.clicked.connect(onClosePort)
 ui.cleaLogs.clicked.connect(cleaToLogs)
 ui.cleaLogsTx.clicked.connect(cleaToLogsTx)
 ui.sendPortBtn.clicked.connect(toPortSendData)
-# Показываем
-ui.show()
-app.exec()
+
+if __name__ == '__main__':
+    # Показываем
+    ui.show()
+    app.exec()
